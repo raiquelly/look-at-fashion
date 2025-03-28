@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Marcas de Luxo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .produto {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+
+        .produto img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .produto h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .produto p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .produto button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .produto button:hover {
+            background-color: #555;
+        }
+
+        #carrinho {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #carrinho h2 {
+            margin: 0;
+        }
+
+        #total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="produto" data-preco="1500">
+            <img src="https://via.placeholder.com/100?text=Dior" alt="Dior">
+            <h3>Dior</h3>
+            <p>R$ 1.500,00</p>
+            <button onclick="adicionarCarrinho('Dior', 1500)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" data-preco="1200">
+            <img src="https://via.placeholder.com/100?text=Chanel" alt="Chanel">
+            <h3>Chanel</h3>
+            <p>R$ 1.200,00</p>
+            <button onclick="adicionarCarrinho('Chanel', 1200)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" data-preco="1000">
+            <img src="https://via.placeholder.com/100?text=Gucci" alt="Gucci">
+            <h3>Gucci</h3>
+            <p>R$ 1.000,00</p>
+            <button onclick="adicionarCarrinho('Gucci', 1000)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" data-preco="800">
+            <img src="https://via.placeholder.com/100?text=Kalvin+Klein" alt="Kalvin Klein">
+            <h3>Kalvin Klein</h3>
+            <p>R$ 800,00</p>
+            <button onclick="adicionarCarrinho('Kalvin Klein', 800)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" data-preco="2500">
+            <img src="https://via.placeholder.com/100?text=Prada" alt="Prada">
+            <h3>Prada</h3>
+            <p>R$ 2.500,00</p>
+            <button onclick="adicionarCarrinho('Prada', 2500)">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="produto" data-preco="3500">
+            <img src="https://via.placeholder.com/100?text=Louis+Vuitton" alt="Louis Vuitton">
+            <h3>Louis Vuitton</h3>
+            <p>R$ 3.500,00</p>
+            <button onclick="adicionarCarrinho('Louis Vuitton', 3500)">Adicionar ao carrinho</button>
+        </div>
+    </div>
+
+    <div id="carrinho">
+        <h2>Carrinho</h2>
+        <div id="itensCarrinho"></div>
+        <p id="total">Total: R$ 0,00</p>
+    </div>
+
+    <script>
+        let total = 0;
+        const itensCarrinho = [];
+
+        function adicionarCarrinho(nome, preco) {
+            // Adiciona o item ao carrinho
+            itensCarrinho.push({ nome, preco });
+            total += preco;
+
+            // Exibe os itens do carrinho
+            const itensDiv = document.getElementById('itensCarrinho');
+            itensDiv.innerHTML = itensCarrinho.map(item => `<p>${item.nome} - R$ ${item.preco.toFixed(2)}</p>`).join('');
+
+            // Atualiza o total
+            document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
