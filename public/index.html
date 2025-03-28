@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Luxo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .product-info p {
+            font-size: 16px;
+            color: #777;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+        .brand {
+            font-size: 14px;
+            color: #aaa;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Loja de Luxo</h1>
+    <p>Encontre as melhores marcas e produtos de luxo</p>
+</header>
+
+<div class="container">
+    <!-- Produto 1 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Vestido+Chanel" alt="Vestido Chanel">
+        <div class="product-info">
+            <h3>Vestido Chanel</h3>
+            <p class="brand">Marca: Chanel</p>
+            <p class="price">R$ 10.000,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Bolsa+Gucci" alt="Bolsa Gucci">
+        <div class="product-info">
+            <h3>Bolsa Gucci</h3>
+            <p class="brand">Marca: Gucci</p>
+            <p class="price">R$ 8.500,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Sapato+Valentino" alt="Sapato Valentino">
+        <div class="product-info">
+            <h3>Sapato Valentino</h3>
+            <p class="brand">Marca: Valentino</p>
+            <p class="price">R$ 6.200,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Maquiagem+Dior" alt="Maquiagem Dior">
+        <div class="product-info">
+            <h3>Maquiagem Dior</h3>
+            <p class="brand">Marca: Dior</p>
+            <p class="price">R$ 500,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 5 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Saia+Yves+Saint+Laurent" alt="Saia Yves Saint Laurent">
+        <div class="product-info">
+            <h3>Saia Yves Saint Laurent</h3>
+            <p class="brand">Marca: Yves Saint Laurent</p>
+            <p class="price">R$ 3.200,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 6 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Conjunto+Prada" alt="Conjunto Prada">
+        <div class="product-info">
+            <h3>Conjunto Prada</h3>
+            <p class="brand">Marca: Prada</p>
+            <p class="price">R$ 7.800,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 7 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Jaqueta+Louis+Vuitton" alt="Jaqueta Louis Vuitton">
+        <div class="product-info">
+            <h3>Jaqueta Louis Vuitton</h3>
+            <p class="brand">Marca: Louis Vuitton</p>
+            <p class="price">R$ 15.000,00</p>
+        </div>
+    </div>
+
+    <!-- Produto 8 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/250x250?text=Sapato+Calvin+Klein" alt="Sapato Calvin Klein">
+        <div class="product-info">
+            <h3>Sapato Calvin Klein</h3>
+            <p class="brand">Marca: Calvin Klein</p>
+            <p class="price">R$ 2.500,00</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Loja de Luxo - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
